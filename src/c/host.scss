@@ -1,0 +1,35 @@
+$host-sample-info-highlight-color: crimson;
+$host-sample-prop-color: #9cdcfe;
+
+.host-sample {
+
+	&__actions {
+		display: flex;
+		padding: 1em;
+	}
+
+	&__info {
+		margin-top: 1em;
+		padding: 1em;
+		font-family: "consolas";
+		background: #00000080;
+		
+		&:hover,
+		&:focus {
+		  background: $host-sample-highlight-color;
+		}
+	}
+
+	&__prop {
+		color: $host-sample-prop-color;
+		margin-right: 0.5em;
+	}
+
+}
+
+$highlight: (
+	highlightColor: crimson,
+	propColor: #9cdcfe,
+);
+
+$prop-color: map-get($highlight, propColor);

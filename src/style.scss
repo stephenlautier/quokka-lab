@@ -1,0 +1,17 @@
+.host-sample__actions {
+	display: flex;
+	padding: 1em;
+  }
+  .host-sample__info {
+	margin-top: 1em;
+	padding: 1em;
+	font-family: "consolas";
+	background: #00000080;
+  }
+  .host-sample__info:hover, .host-sample__info:focus {
+	background: crimson;
+  }
+  .host-sample__prop {
+	color: #9cdcfe;
+	margin-right: 0.5em;
+  }
