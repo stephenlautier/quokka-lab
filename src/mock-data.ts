@@ -1,3 +1,16 @@
+export interface Hero {
+	key: string;
+	name: string;
+	role: RoleType;
+	damage?: number;
+}
+
+export enum RoleType {
+	tank = "tank",
+	assassin = "assassin",
+	specialist = "specialist",
+}
+
 export const HEROES: Hero[] = [{
 	key: "rexxar",
 	name: "Rexxar",
