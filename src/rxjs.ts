@@ -1,5 +1,4 @@
-import { Observable, Subject, of, empty } from "rxjs";
-import { delay, tap, switchMap } from "rxjs/operators";
+import { Observable, Subject, of, delay, tap, switchMap, EMPTY } from "rxjs";
 
 const effect$ = new Subject();
 const service = new Subject();
@@ -31,9 +30,9 @@ service.next("fail");
 // source.next("#4");
 // service.next("yrey");
 
-empty()
-	.subscribe(
-		() => console.log("next #1 finish"),
-		() => console.log("next #2 finish"),
-		() => console.log("next #3 finish")
-	);
+EMPTY
+	.subscribe({
+		error: () => console.log("next #1 finish"),
+		complete: () => console.log("next #2 finish"),
+		next: () => console.log("next #3 finish")
+	});
